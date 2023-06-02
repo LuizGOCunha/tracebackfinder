@@ -33,6 +33,7 @@ def find_tracebacks(logs:str) -> Tuple[List[str]]:
 
         elif exception_string(line):
             # Add the exception and adds to list (final line)
+            # Also adds exception string to exception list
             string += (line + "\n")
             traceback_list.append(string)
             exception_list.append(line)
